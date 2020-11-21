@@ -61,18 +61,18 @@
                         <div class="content-inner">
                             <section id="download-section" class="doc-section">'
                                 <h1 class="section-title">API<i>Scanner</i>: Towards Automated Detection of Deprecated APIs in Python Frameworks</h1>
-                                <h3 class="block-title">What is API<i>Scanner</i></h3>
+                                <h3 id = "Description" class="block-title">What is API<i>Scanner</i></h3>
                                 <div class="section-block">
                                     <p>API<i>Scanner</i> is Visual Studio Code extension, that highlights the deprecated API elements used in python language. The current version only detects deprecated APIs present in six python frameworks - <i>Scikit-learn</i>, <i>Numpy</i>, <i>Matplotlib</i>, <i>Pandas</i>, <i>Scipy</i>, <i>Seaborn</i> </p>
                                 </div>
-                                <h3 class="block-title">Features of API<i>Scanner</i></h3>
+                                <h3 id = "features" class="block-title">Features of API<i>Scanner</i></h3>
                                 <div class="section-block">
                                     <ol>
                                         <li><p>Identifies the deprecated API elements present in the current active editor.</p></li>
                                         <li><p>On hover, hovercard pop-up shows the information regarding the deprecation (such as version in which it has been deprecated and any available replacement message provided by the library developer).</p></li>
                                     </ol>
                                 </div>
-                                <h3 class="block-title">Uses of API<i>Scanner</i></h3>
+                                <h3 id = "uses" class="block-title">Uses of API<i>Scanner</i></h3>
                                 <div class="section-block">
                                     <ol>
                                         <li><p>Deprecated APIs are discouraged from being used in further software developments.</p></li>
@@ -97,9 +97,16 @@
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
                             <section id="icons-section" class="doc-section">
-                                <h2 class="section-title">Approach diagram</h2>
+                                <h2 class="section-title">Working of API<i>Scanner</i></h2>
                                 <div class="section-block">
-                                    <p>Brief explanation of approach here</p>
+                                    <p>The approach followed by API<i>Scanner</i> is summarized below:</p>
+                                    <ol>
+                                        <li><p>In the current active editor, it extracts the import statements to identify the libraries being used in the current program.</p></li>
+                                        <li><p>We then parse the soure code of library to generate Abstract Syntax Tree.</p></li>
+                                        <li><p>Structure of AST helps to realize the relationship between class declaration and function definition with decorator, hard-coded warnings, and comments</p></li>
+                                        <li><p>We then extract all the deprecated API elements declared using the above three methods.</p></li>
+                                        <li><p>We, now highlight all the deprecated API elements in the VS Code Editor, by matching with list of deprecated API elements we generated.</p></li>
+                                    </ol>
                                 </div><!--//section-block-->
                                 <div class="section-block">
                                     <img class="img-fluid" src="assets/images/updated_process_diagram.PNG" alt="elegant icons" />
@@ -135,21 +142,21 @@ class ClassVisitor(ast.NodeVisitor):
                             <section id="tables-section" class="doc-section">
                                 <h2 class="section-title">Results</h2>
                                 <div class="section-block">
-                                    <p>Brief explanation about results here
+                                    <p>The proposed algorithm identified 838 out of 871 APIelements across six different Python libraries
                                     </p>
                                 </div>
                                 <div class="section-block">
-                                    <p>screen shot of results here</p>
+                                    <img src="assets/images/results.JPG">
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
                             <section id="video-section" class="doc-section">
-                                <h2 class="section-title">Demo Video</h2>
+                                <h2 class="section-title">Demonstration</h2>
                                 <div class="section-block">
                                     <div class="row">
                                         <div class="col-md-6 col-12">
-                                            <h6>Demo video here</h6>
+                                            <!-- <h6>Demo video here</h6> -->
                                             <div class="embed-responsive embed-responsive-4by3">
-                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/mkDxuRvKUL8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/1hy_ugf-iek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             </div>
                                         </div>
                                     </div><!--//row-->
@@ -164,17 +171,26 @@ class ClassVisitor(ast.NodeVisitor):
 	                        
 	                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
 	                                <a class="nav-link scrollto" href="#download-section">Tool Description</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#description">What is API<i>Scanner</i></a>
+                                    </nav><!--//nav-->
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#features">Features of API<i>Scanner</i></a>
+                                    </nav><!--//nav-->
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#uses">Uses of API<i>Scanner</i></a>
+                                    </nav><!--//nav-->
 	                                <a class="nav-link scrollto" href="#installation-section">Manual Installation</a>
                                     <nav class="doc-sub-menu nav flex-column">
-                                        <a class="nav-link scrollto" href="#step1">Using Github</a>
+                                        <a class="nav-link scrollto" href="#step1">Install from Marketplace</a>
                                     </nav><!--//nav-->
-                                    <a class="nav-link scrollto" href="#icons-section">Approach diagram</a>
+                                    <a class="nav-link scrollto" href="#icons-section">Working of APIScanner</a>
 	                                <a class="nav-link scrollto" href="#code-section">Code</a>
                                     <nav class="doc-sub-menu nav flex-column">
                                         <a class="nav-link scrollto" href="#html">Parsing class</a>
                                     </nav><!--//nav-->
 	                                <a class="nav-link scrollto" href="#tables-section">Results</a>
-	                                <a class="nav-link scrollto" href="#video-section">Demo Video</a>
+	                                <a class="nav-link scrollto" href="#video-section">Demonstration</a>
 	                            </nav><!--//doc-menu-->
 	                        
                         </div>
