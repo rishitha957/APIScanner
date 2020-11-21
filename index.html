@@ -38,7 +38,7 @@
                     
                 </div>
                 
-                <div class="top-search-box">
+               <!--  <div class="top-search-box">
 	                 <form class="form-inline search-form justify-content-center" action="" method="get">
 	            
 			            <input type="text" placeholder="Search..." name="search" class="form-control search-input">
@@ -46,7 +46,7 @@
 			            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
 			            
 			        </form>
-                </div>
+                </div> -->
                 
             </div><!--//container-->
         </header><!--//header-->
@@ -61,13 +61,14 @@
                         <div class="content-inner">
                             <section id="download-section" class="doc-section">'
                                 <h1 class="section-title">Towards Automated Detection of Deprecated APIs in Python Frameworks</h1>
-                                <h3 id = "description" class="block-title">What is API<i>Scanner</i></h3>
+                                <h3 id = "description" class="block-title">What is API<i>Scanner?</i></h3>
                                 <div class="section-block">
                                     <p>API<i>Scanner</i> is Visual Studio Code extension, that highlights the deprecated API elements used in python language. The current version only detects deprecated APIs present in six python frameworks - <i>Scikit-learn</i>, <i>Numpy</i>, <i>Matplotlib</i>, <i>Pandas</i>, <i>Scipy</i>, <i>Seaborn</i> </p>
                                 </div>
                                 <h3 id = "features" class="block-title">Features of API<i>Scanner</i></h3>
                                 <div class="section-block">
                                     <ol>
+                                        <li><p>An algorithm to automatically identify deprecated APIs present source code of python library. </p></li>
                                         <li><p>Identifies the deprecated API elements present in the current active editor.</p></li>
                                         <li><p>On hover, hovercard pop-up shows the information regarding the deprecation (such as version in which it has been deprecated and any available replacement message provided by the library developer).</p></li>
                                     </ol>
@@ -104,9 +105,9 @@
                                     <ol>
                                         <li><p>In the current active editor, it extracts the import statements to identify the libraries being used in the current program.</p></li>
                                         <li><p>We then parse the soure code of library to generate Abstract Syntax Tree.</p></li>
-                                        <li><p>Structure of AST helps to realize the relationship between class declaration and function definition with decorator, hard-coded warnings, and comments</p></li>
+                                        <!-- <li><p>Structure of AST helps to realize the relationship between class declaration and function definition with decorator, hard-coded warnings, and comments</p></li> -->
                                         <li><p>We then extract all the deprecated API elements declared using the above three methods.</p></li>
-                                        <li><p>We, now highlight all the deprecated API elements in the VS Code Editor, by matching with list of deprecated API elements we generated.</p></li>
+                                        <li><p>API<i>Scanner</i>, now highlights all the deprecated API elements in the VS Code Editor, by matching with list of deprecated API elements we generated.</p></li>
                                     </ol>
                                 </div><!--//section-block-->
                                 <div class="section-block">
