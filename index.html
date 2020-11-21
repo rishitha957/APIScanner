@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>TBD: Detection of Deprecated API in ML frameworks</title>
+    <title>APIScanner</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,8 +31,8 @@
                 <div class="branding">
                     <h1 class="logo">
                         <a href="index.html">
-                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
-                            <span class="text-highlight">TBD</span><span class="text-bold">Docs</span>
+                            <!-- <span aria-hidden="true" class="icon_documents_alt icon"></span> -->
+                            <span class="text-highlight">API</span><span class="text-bold"><i>Scanner</i></span>
                         </a>
                     </h1>
                     
@@ -60,23 +60,39 @@
                     <div class="doc-content col-md-9 col-12 order-1">
                         <div class="content-inner">
                             <section id="download-section" class="doc-section">'
-                                <h1 class="section-title">TBD: A TOOL TO DETECT DEPRECATED APIS IN ML FRAMEWORKS</h1>
-                                <h3 class="block-title">Tool Description</h3>
+                                <h1 class="section-title">API<i>Scanner</i>: Towards Automated Detection of Deprecated APIs in Python Frameworks</h1>
+                                <h3 class="block-title">What is API<i>Scanner</i></h3>
                                 <div class="section-block">
-                                    <p> Write your abstract here - or a quick description</p>
-                                    <a href="https://github.com/rishitha957/ADepD/archive/main.zip" class="btn btn-green" target="_blank"><i class="fas fa-download"></i> Download Tool Zip</a>
+                                    <p>API<i>Scanner</i> is Visual Studio Code extension, that highlights the deprecated API elements used in python language. The current version only detects deprecated APIs present in six python frameworks - <i>Scikit-learn</i>, <i>Numpy</i>, <i>Matplotlib</i>, <i>Pandas</i>, <i>Scipy</i>, <i>Seaborn</i> </p>
+                                </div>
+                                <h3 class="block-title">Features of API<i>Scanner</i></h3>
+                                <div class="section-block">
+                                    <ol>
+                                        <li><p>Identifies the deprecated API elements present in the current active editor.</p></li>
+                                        <li><p>On hover, hovercard pop-up shows the information regarding the deprecation (such as version in which it has been deprecated and any available replacement message provided by the library developer).</p></li>
+                                    </ol>
+                                </div>
+                                <h3 class="block-title">Uses of API<i>Scanner</i></h3>
+                                <div class="section-block">
+                                    <ol>
+                                        <li><p>Deprecated APIs are discouraged from being used in further software developments.</p></li>
+                                        <li><p>To help developers mitigate the usage of deprecated APIs during new software developments, the developer must be aware of the usage of deprecated APIs in the project.</p></li>
+                                        <li><p>Manually detecting and replacing deprecated APIs is a tedious and time-consuming task due to the large number of API calls used in the projects.</p></li>
+                                        <li><p>With the help of API<i>Scanner</i> developers can identify the deprecated APIs in the developing phase.</p></li>
+                                    </ol>
                                 </div>
                             </section><!--//doc-section-->
                             <section id="installation-section" class="doc-section">
-                                <h2 class="section-title">Manual Installation</h2>
+                                <h2 class="section-title">Installation</h2>
                                 <div id="step1"  class="section-block">
-                                    <h3 class="block-title">Using Github</h3>
+                                    <h3 class="block-title">Install from Marketplace</h3>
                                     <div class="code-block">
-                                        <h6>Default code example:</h6>
-                                        <p>Clone our repository using git</p>
+                                        <!-- <h6>Default code example:</h6> -->
+                                        <p>Click on the </p>
                                         <p><code>git clone https://github.com/rishitha957/ADepD.git</code></p>
                                         <p>Activate virtual environment for python (if any). Run main.py file using the following command, and pass the path of ML library as the parameter.</p>
                                         <p><code>python main.py &lt;path to ML library&gt;</code></p>
+                                        <a href="https://marketplace.visualstudio.com/items?itemName=Rishitha.apiscanner#review-details" class="btn btn-green" target="_blank"><i class="fas fa-download"></i> Download Extension</a>
                                     </div><!--//code-block-->
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
@@ -86,7 +102,7 @@
                                     <p>Brief explanation of approach here</p>
                                 </div><!--//section-block-->
                                 <div class="section-block">
-                                    <img class="img-fluid" src="assets/images/demo/updated_process_diagram.PNG" alt="elegant icons" />
+                                    <img class="img-fluid" src="assets/images/updated_process_diagram.PNG" alt="elegant icons" />
                                 </div><!--//section-block-->
                                 
                             </section><!--//doc-section-->
@@ -147,7 +163,7 @@ class ClassVisitor(ast.NodeVisitor):
                         <div id="doc-nav" class="doc-nav">
 	                        
 	                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
-	                                <a class="nav-link scrollto" href="#download-section">Download</a>
+	                                <a class="nav-link scrollto" href="#download-section">Tool Description</a>
 	                                <a class="nav-link scrollto" href="#installation-section">Manual Installation</a>
                                     <nav class="doc-sub-menu nav flex-column">
                                         <a class="nav-link scrollto" href="#step1">Using Github</a>
